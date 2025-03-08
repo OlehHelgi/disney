@@ -66,17 +66,24 @@ body {
 
 
 .logo:hover svg {
-  fill:#00A9BD;
+  color: #00A9BD;
 }
 
 
 .menu__link {
+  display: inline-block;
   font-family: 'Raleway-Medium', sans-serif;
   font-weight: 500;
   font-size: 18px;
   text-transform: uppercase;
+  transition: font-weight 0.3s;
 }
 
+
+.menu__link:hover {
+  font-family: 'Raleway-Bold', sans-serif;
+  font-weight: 700;
+}
 
 .menu__list {
   display: flex;
@@ -90,13 +97,16 @@ body {
   gap: 44px;
 }
 
+
 .social__link {
   display: inline-block;
 }
 
+
 .social__link svg {
   transition: color 0.3s ease, transform 0.3s ease;
 }
+
 
 .social__link:hover svg {
   color: #00A9BD;
