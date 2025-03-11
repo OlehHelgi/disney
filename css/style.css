@@ -74,16 +74,40 @@ body {
   display: inline-block;
   font-family: 'Raleway-Medium', sans-serif;
   font-weight: 500;
-  font-size: 18px;
   text-transform: uppercase;
-  transition: font-weight 0.3s;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.menu__item {
+  position: relative;
+  font-size: 18px;
 }
 
 
-.menu__link:hover {
+.menu__item::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  text-transform: uppercase;
   font-family: 'Raleway-Bold', sans-serif;
   font-weight: 700;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+
 }
+
+.menu__item:hover .menu__link {
+  opacity: 0;
+}
+
+.menu__item:hover::after {
+  opacity: 1;
+}
+
 
 .menu__list {
   display: flex;
